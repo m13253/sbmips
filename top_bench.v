@@ -22,7 +22,7 @@
 module top_bench;
 
     // Inputs
-    reg btn;
+    reg clk;
     reg gclk;
     reg rst;
     reg [7:0] led_sel;
@@ -32,7 +32,7 @@ module top_bench;
 
     // Instantiate the Unit Under Test (UUT)
     top uut (
-        .btn(btn),
+        .clk(clk),
         .gclk(gclk),
         .rst(rst),
         .led_sel(led_sel),
@@ -41,7 +41,7 @@ module top_bench;
 
     initial begin
         // Initialize Inputs
-        btn = 0;
+        clk = 0;
         gclk = 0;
         rst = 0;
         led_sel = 0;
@@ -51,7 +51,7 @@ module top_bench;
 
         // Add stimulus here
         repeat(500) begin
-            btn = ~btn;
+            clk = ~clk;
             gclk = ~gclk;
             #100;
         end
