@@ -7,10 +7,68 @@ Naïve MIPS32-like CPU design on a Xilinx FPGA
 - Five-stage pipeline
 - Data forwarding
 - One-instruction delay slot
+
 - No branch prediction
 - No privileged instructions
+- No interruptions or exceptions
 
 Academic reference purpose only, contains bugs, not suitable for production.
+
+## Implemented instructions
+
+### R-Type
+
+- `sll` - Logical left shift
+- `srl` - Logical right shift
+- `sra` - Arithmetical right shift
+- `sllv` - Logical left shift by value
+- `srlv` - Logical right shift by value
+- `srav` - Arithmetical right shift by value
+- `jr` - Jump by register
+- `jalr` - Jump and link by register
+- `add` - Add
+- `addu` - Add without overflow check
+- `sub` - Subtract
+- `subu` - Subtract without overflow check
+- `and` - Bitwise and
+- `or` - Bitwise or
+- `xor` - Bitwise exclusive or
+- `nor` - Bitwise not or
+- `slt` - Set if less than
+- `sltu` - Set if unsigned less than
+
+### I-Type
+
+- `beq` - Branch if equal
+- `bne` - Branch if not equal
+- `addi` - Add immediate value
+- `addiu` - Add immediate value without overflow check
+- `slti` - Set if less than immediate value
+- `sltiu` - Set if less than unsigned immediate value
+- `andi` - Bitwise and immediate value
+- `ori` - Bitwise or immediate value
+- `xori` - Bitwise exclusive or immediate value
+- `lui` - Load immediate value as upper half-word
+- `lw` - Load word from memory
+- `sw` - Store word from memory
+
+### J-Type
+
+- `j` - Jump
+- `jal` - Jump and link
+
+### Available pseudo-instructions
+
+- `la` - Load address
+- `li` - Load immediate value
+- `move` - Move register
+- `negu` - Negation
+- `nop` - No operation
+- `not` - Bitwise not
+- `b` - Branch
+- `bal` - Branch and link
+- `beqz` - Branch if equal to zero
+- `bnez` - Branch if not equal to zero
 
 ## Model
 
