@@ -1,6 +1,4 @@
 
-# Development board: Exynos 3
-
 # PlanAhead Generated physical constraints 
 
 NET "led[11]" LOC = T17;
