@@ -78,7 +78,7 @@ FPGA chip: Xilinx Spartan-6 `xc6slx16-3csg324`
 
 ## I/O
 
-- `clk` and `rst` are controlled by two buttons, so you can single-step over the program.
+- `clk (btn)` and `rst` are controlled by two buttons, so you can single-step over the program.
 
 - `gclk` is driven by 100 MHz quartz crystal resonator.
 
