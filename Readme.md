@@ -90,4 +90,4 @@ FPGA chip: Xilinx Spartan-6 `xc6slx16-3csg324`
 
 Released under GNU General Public License version 3 (GPLv3).
 
-See [COPYING](COPYING) for more information.
+See [LICENSE](LICENSE) for more information.
