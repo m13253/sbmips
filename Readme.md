@@ -74,7 +74,17 @@ Academic reference purpose only, contains bugs, not suitable for production.
 
 Development board: Digilent Exynos 3
 
-FPGA chip: Xilinx Spartan-6 xc6slx16-3csg324
+FPGA chip: Xilinx Spartan-6 `xc6slx16-3csg324`
+
+## I/O
+
+`clk` and `rst` are controlled by two buttons, so you can single-step over the program.
+
+`gclk` is driven by 100 MHz quartz crystal resonator.
+
+`led_sel` is bond to 8 switches.
+
+`led` powers the 4-digit seven-segmented display, showing values of different registers according to `led_sel`.
 
 ## License
 
