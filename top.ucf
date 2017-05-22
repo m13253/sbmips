@@ -1,0 +1,28 @@
+
+# Development board: Exynos 3
+
+# PlanAhead Generated physical constraints 
+
+NET "led[11]" LOC = T17;
+NET "led[10]" LOC = T18;
+NET "led[9]" LOC = U17;
+NET "led[8]" LOC = U18;
+NET "led[7]" LOC = M14;
+NET "led[6]" LOC = N14;
+NET "led[5]" LOC = L14;
+NET "led[4]" LOC = M13;
+NET "led[3]" LOC = N16;
+NET "led[2]" LOC = N15;
+NET "led[1]" LOC = P18;
+NET "led[0]" LOC = P17;
+NET "led_sel[7]" LOC = T5;
+NET "led_sel[6]" LOC = V8;
+NET "led_sel[5]" LOC = U8;
+NET "led_sel[4]" LOC = N8;
+NET "led_sel[3]" LOC = M8;
+NET "led_sel[2]" LOC = V9;
+NET "led_sel[1]" LOC = T9;
+NET "led_sel[0]" LOC = T10;
+NET "btn" LOC = D9;
+NET "gclk" LOC = V10;
+NET "rst" LOC = C4;
