@@ -72,7 +72,7 @@ Academic reference purpose only, contains bugs, not suitable for production.
 
 ## Model
 
-Development board: Digilent Exynos 3
+Development board: Digilent Nexys 3
 
 FPGA chip: Xilinx Spartan-6 `xc6slx16-3csg324`
 
