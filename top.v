@@ -155,14 +155,14 @@ reg [15:0] led_display;
 always @(*)
     if(led_sel[0])
         if(led_sel[7:1] == 0)
-            led_display = {wb_pc[15:2], 2'b00};
-        else
-            led_display = reg_dout_c[15:0];
-    else
-        if(led_sel[7:1] == 0)
             led_display = wb_pc[31:16];
         else
             led_display = reg_dout_c[31:16];
+    else
+        if(led_sel[7:1] == 0)
+            led_display = {wb_pc[15:2], 2'b00};
+        else
+            led_display = reg_dout_c[15:0];
 
 led_drv led_drv(
     .clk(gclk),

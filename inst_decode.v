@@ -21,7 +21,7 @@ module inst_decode(
     );
 
 initial begin
-    pc_out = 30'hxxxxxxxx; inst_out = 32'hzzzzzzzz;
+    pc_out = 0; inst_out = 32'hzzzzzzzz;
     opcode = 0;
     rs = 0; rt = 0; rd = 0;
     shamt = 0; funct = 0;
@@ -30,7 +30,7 @@ end
 
 always @(posedge clk, posedge rst) begin
     if(rst) begin
-        pc_out = 30'hxxxxxxxx; inst_out = 32'hzzzzzzzz;
+        pc_out = 0; inst_out = 32'hzzzzzzzz;
         opcode = 0;
         rs = 0; rt = 0; rd = 0;
         shamt = 0; funct = 0;

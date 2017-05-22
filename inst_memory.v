@@ -21,13 +21,13 @@ module inst_memory(
     );
 
 initial begin
-    pc_out = 30'hxxxxxxxx; inst_out = 32'hxxxxxxxx;
+    pc_out = 0; inst_out = 32'hxxxxxxxx;
     rd_out = 0; rd_val_out = 0;
 end
 
 always @(posedge clk, posedge rst) begin
     if(rst) begin
-        pc_out = 30'hxxxxxxxx; inst_out = 32'hxxxxxxxx;
+        pc_out = 0; inst_out = 32'hxxxxxxxx;
         rd_out = 0; rd_val_out = 0;
     end else begin
         pc_out = pc_in;

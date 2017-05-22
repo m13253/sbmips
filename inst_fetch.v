@@ -25,12 +25,12 @@ assign mem_en = 1;
 assign inst = ready ? mem_dout : 0;
 
 initial begin
-    pc = 30'hxxxxxxxx;
+    pc = 0;
 end
 
 always @(posedge clk, posedge rst)
     if(rst) begin
-        pc = 30'hxxxxxxxx;
+        pc = 0;
         next_pc = 0;
         ready = 0;
     end else begin

@@ -19,7 +19,7 @@ module inst_writeback(
     );
 
 initial begin
-    pc_out = 30'hxxxxxxxx; inst_out = 32'hxxxxxxxx;
+    pc_out = 0; inst_out = 32'hxxxxxxxx;
 end
 
 assign reg_addr = rd;
@@ -28,7 +28,7 @@ assign reg_we = rd != 5'h00;
 
 always @(posedge clk, posedge rst)
     if(rst) begin
-        pc_out = 30'hxxxxxxxx; inst_out = 32'hxxxxxxxx;
+        pc_out = 0; inst_out = 32'hxxxxxxxx;
     end else begin
         pc_out = pc_in; inst_out = inst;
     end

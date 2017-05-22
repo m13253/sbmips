@@ -39,7 +39,7 @@ module inst_execute(
     );
 
 initial begin
-    pc_out = 30'hzzzzzzzz; inst_out = 32'hzzzzzzzz;
+    pc_out = 0; inst_out = 32'hzzzzzzzz;
     mem_addr = 30'hzzzzzzzz; mem_din = 32'hzzzzzzzz;
     mem_en = 0; mem_we = 0;
     jump = 0; jump_pc = 0;
@@ -207,7 +207,7 @@ end
 
 always @(posedge clk, posedge rst) begin
     if(rst) begin
-        pc_out = 30'hzzzzzzzz; inst_out = 32'hzzzzzzzz;
+        pc_out = 0; inst_out = 32'hzzzzzzzz;
         jump = 0; jump_pc = 0;
         load = 0; store = 0;
         rd_out = 0; rd_val = 0;
