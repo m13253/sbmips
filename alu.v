@@ -78,7 +78,7 @@ always @(*)
             out = $unsigned(a) < $unsigned(b);
         end
         default: begin
-            out = 31'hxxxxxxxx;
+            out = 32'hxxxxxxxx;
         end
     endcase
 
