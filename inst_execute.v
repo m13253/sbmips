@@ -106,7 +106,7 @@ always @(*) begin
         mem_addr = 32'hzzzzzzzz; mem_din = 32'hzzzzzzzz;
         mem_en = 0; mem_we = 0;
     end else if(opcode == 6'h02 || opcode == 6'h03) begin
-        alu_a = pc_in & 32'hf0000000;
+        alu_a = {pc_in + 1, 2'h0} & 32'hf0000000;
         alu_b = {4'h0, immed, 2'h0};
         alu_shamt = 0;
         alu_op = 6'h25; // or
@@ -115,7 +115,7 @@ always @(*) begin
     end else
         case(opcode)
             6'h04: begin // beq
-                alu_a = {pc_in, 2'h0};
+                alu_a = {pc_in + 1, 2'h0};
                 alu_b = $signed({immed, 2'h0});
                 alu_shamt = 0;
                 alu_op = 6'h20; // add
@@ -123,7 +123,7 @@ always @(*) begin
                 mem_en = 0; mem_we = 0;
             end
             6'h05: begin // bne
-                alu_a = {pc_in, 2'h0};
+                alu_a = {pc_in + 1, 2'h0};
                 alu_b = $signed({immed, 2'h0});
                 alu_shamt = 0;
                 alu_op = 6'h20; // add
@@ -257,7 +257,7 @@ always @(posedge clk, posedge rst) begin
                 jump = reg_data_a == reg_data_b;
             else // bne
                 jump = reg_data_a != reg_data_b;
-            jump_pc = alu_out[31:2] + 1;
+            jump_pc = alu_out[31:2];
             load = 0; store = 0;
             rd_out = 0; rd_val = 0;
             last_rd = 0; last_rd_val = 0;
